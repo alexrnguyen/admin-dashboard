@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700;900&display=swap');
+
 :root {
     --primary-color: #1E91D6;
     --secondary-color: #16C172;
@@ -8,14 +10,14 @@
 body, html {
     height: 100%;
     margin: 0;
+    font-family: 'Roboto';
 }
 
 .logo {
     color: white;
     font-size: 2rem;
-    font-family: Arial, Helvetica, sans-serif;
     font-weight: bold;
-    padding: 1.5rem;
+    padding: 2rem;
 }
 
 .container {
@@ -37,14 +39,13 @@ body, html {
 
 .dashboard-item {
     display: grid;
-    grid-template-columns: 1fr 4fr;
+    grid-template-columns: 1fr 5fr;
     align-items: center;
 }
 
 a {
     color: white;
     font-size: 1.5rem;
-    font-family: Arial, Helvetica, sans-serif;
     text-decoration: none;
 }
 
@@ -55,6 +56,94 @@ a {
 
 .header {
     background-color: var(--secondary-color);
+    display: grid;
+    grid-template: 1fr 1fr / 2fr 1fr
+}
+
+.searchbar-container, .greeting-container {
+    padding-left: 3rem;
+}
+
+.searchbar-container {
+    display: grid;
+    grid-template-columns: 1fr 20fr;
+    align-items: center;
+}
+
+.searchbar {
+    background-color: lightgray;
+    width: 50rem;
+    height: 25px;
+    border-radius: 20px;
+}
+
+.user-info, .buttons {
+    padding-right: 5rem;
+}
+
+.user-info {
+    justify-self: end;
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+}
+
+.profile-icon {
+    border-radius: 100%;
+}
+
+.profile-icon.small {
+    width: 2.5rem;
+    height: 2.5rem;
+}
+
+.profile-icon.large {
+    width: 5rem;
+    height: 5rem;
+}
+
+.username {
+    font-size: max(12px, 1.25rem);
+}
+
+.bold {
+    font-weight: bold;
+}
+
+.greeting-container {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    padding-bottom: 1.5rem;
+}
+
+.greeting {
+    line-height: 2rem;
+}
+
+.small-text::after {
+    content: '\a';
+    white-space: pre;
+}
+
+.large-text {
+    font-size: 1.5rem;
+}
+
+.buttons {
+    display: flex;
+    align-items: center;
+    justify-content: end;
+    gap: 2rem;
+}
+
+button {
+    background-color: var(--primary-color);
+    color: white;
+    font-size: 1rem;
+    border-radius: 20px;
+    border: none;
+    padding: 0.75rem 2rem;
 }
 
 .main-content {
