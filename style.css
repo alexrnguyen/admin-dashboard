@@ -1,0 +1,29 @@
+:root {
+    --primary-color: #258EA6;
+    --secondary-color: #16C172;
+    --off-white: #ECEBE4;
+}
+
+body, html {
+    height: 100%;
+    margin: 0;
+}
+
+.container {
+    height: 100%;
+    display: grid;
+    grid-template: 1fr 5fr / 1fr 5fr;
+}
+
+.sidebar {
+    background-color: var(--primary-color);
+    grid-row: span 2;
+}
+
+.header {
+    background-color: var(--secondary-color);
+}
+
+.main-content {
+    background-color: var(--off-white);
+}
