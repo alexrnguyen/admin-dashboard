@@ -3,7 +3,6 @@
 :root {
     --primary-color: #1E91D6;
     --secondary-color: #16C172;
-    --off-white: #ECEBE4;
     --icon-size: 25px;
 }
 
@@ -11,6 +10,14 @@ body, html {
     height: 100%;
     margin: 0;
     font-family: 'Roboto';
+}
+
+h3 {
+    margin-bottom: 0;
+}
+
+p {
+    margin: 0;
 }
 
 .logo {
@@ -147,5 +154,47 @@ button {
 }
 
 .main-content {
-    background-color: var(--off-white);
+    background-color: lightgray;
+    display: grid;
+    gap: 1rem;
+    grid-template-columns: 3fr 1fr;
+    grid-template-rows: 1fr 1fr;
+}
+
+.projects-container {
+    padding-left: 1.5rem;
+    grid-row: span 2;
+}
+
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    gap: 1rem;
+}
+
+.project-card {
+    width: 400px;
+    height: 200px;
+    background-color: white;
+    border-radius: 10px;
+    display: grid;
+    grid-template-rows: 1fr 3fr 1fr;
+}
+
+.project-header, .project-content {
+    padding-left: 1rem;
+}
+
+.project-options {
+    display: flex;
+    justify-content: end;
+    gap: 1rem;
+    padding-right: 1.5rem;
+    padding-bottom: 1.5rem;
+}
+
+.project-icon {
+    width: var(--icon-size);
+    height: var(--icon-size);
 }
