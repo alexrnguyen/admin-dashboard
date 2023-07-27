@@ -2,6 +2,9 @@
 
 TOP Admin Dashboard
 
+## Outstanding Issues
+- Background does not fill the screen when the user changes the window size 
+
 ## Acknowledgements
 
 Icons taken from [Pictogrammers](https://pictogrammers.com/library/mdi/)
