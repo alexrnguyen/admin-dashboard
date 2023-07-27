@@ -7,7 +7,6 @@
 }
 
 body, html {
-    height: 100%;
     margin: 0;
     font-family: 'Roboto';
 }
@@ -34,7 +33,7 @@ p {
 .container {
     height: 100%;
     display: grid;
-    grid-template: 1fr 5fr / 1fr 5fr;
+    grid-template: 1fr minmax(600px, 4fr) / 1fr minmax(600px, 5fr);
 }
 
 .sidebar {
@@ -68,7 +67,7 @@ a {
 .header {
     background-color: var(--secondary-color);
     display: grid;
-    grid-template: 1fr 1fr / 2fr 1fr
+    grid-template: 1fr 1fr / 2fr 1fr;
 }
 
 .searchbar-container, .greeting-container {
@@ -84,7 +83,7 @@ a {
 .searchbar {
     background-color: lightgray;
     width: 50rem;
-    height: 50px;
+    height: 3em;
     border-radius: 40px;
 }
 
@@ -165,28 +164,28 @@ button {
 .main-content {
     background-color: lightgray;
     display: grid;
-    gap: 1rem;
+    gap: 2rem;
     grid-template-columns: 3fr 1fr;
-    grid-template-rows: 1fr 1fr;
+    padding-bottom: 2rem;
 }
 
 .projects-container {
     padding-left: 1.5rem;
-    grid-row: span 2;
 }
 
 .projects-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    grid-auto-flow: 250px;
-    gap: 1rem;
+    grid-auto-rows: 250px;
+    gap: 2rem;
 }
 
 .project-card {
-    height: 200px;
+    min-height: 10rem;
     background-color: white;
     border-left: 10px solid var(--secondary-color);
     border-radius: 10px;
+    padding: 1rem;
     display: grid;
     grid-template-rows: 1fr 3fr 1fr;
 }
@@ -208,8 +207,12 @@ button {
     height: var(--icon-size);
 }
 
-.announcements-container, .trending-container {
-    padding-right: 3rem;
+.news {
+    padding-right: 2rem;
+}
+
+.announcements-container {
+    padding-bottom: 2rem;
 }
 
 .announcements-inner-container {
