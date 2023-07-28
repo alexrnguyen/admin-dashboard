@@ -33,7 +33,8 @@ p {
 .container {
     height: 100%;
     display: grid;
-    grid-template: 1fr minmax(600px, 4fr) / 1fr minmax(600px, 5fr);
+    grid-template: 1fr minmax(600px, 4fr) / 1fr minmax(800px, 5fr);
+    overflow-x: hidden;
 }
 
 .sidebar {
@@ -67,7 +68,7 @@ a {
 .header {
     background-color: var(--secondary-color);
     display: grid;
-    grid-template: 1fr 1fr / 2fr 1fr;
+    grid-template: 1fr 1fr / minmax(400px, 1fr) 1fr;
 }
 
 .searchbar-container, .greeting-container {
@@ -82,7 +83,7 @@ a {
 
 .searchbar {
     background-color: lightgray;
-    width: 50rem;
+    width: max(300px, 80%);
     height: 3em;
     border-radius: 40px;
 }
